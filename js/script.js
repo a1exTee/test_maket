@@ -37,6 +37,13 @@ $(document).ready(function(){
         });
 
     });
+	
+	//youtobe
+	$(function(){
+		$("#fon_video").YTPlayer();
+	});
+	
+
 
 });
 

@@ -11,11 +11,17 @@ a:hover {
 .container-fluid {
     max-width: 980px;
 }
-button {
-    width: 166px;
+
+.btn {
+    width: 205px;
     height: 44px;
     border-radius: 0px!important;
 }
+.bell button {
+    width: 166px;
+    height: 44px;
+}
+
 h2{
     color: #fff;
     font-size: 30px;
@@ -41,15 +47,6 @@ h1 {
     text-transform: uppercase;
 }
 
-.navbar {
-    margin-bottom: 4px;
-    border: none;
-    background-color: #fff;
-}
-.navbar-nav li a {
-    padding: 10px 33px;
-    text-transform: uppercase;
-}
 .navbar-brand span {
     color: #036ad0;
     font-weight: bold;
@@ -61,8 +58,52 @@ h1 {
     margin-right: 51px;
     display: inline;
     height: auto;
-    padding: 13px 15px;
+    padding: 0px 15px 0px 15px;
+    margin-bottom: 13px;
 }
+.navbar-header .navbar-brand {
+    display: none;
+}
+.navbar-default {
+    border: none;
+    background-color: #fff;
+}
+#navbarCollapse .navbar-nav li a{
+    border: none;
+    background-color: #fff;
+    color: #000;
+    text-transform: uppercase;
+    font-size: 14px;
+}
+#navbarCollapse .navbar-nav li a:hover {
+    color: red;
+    text-decoration: underline;
+}
+#navbarCollapse .navbar-nav li a i{
+    color: #969696;
+    margin-left: 10px;
+}
+#navbarCollapse .navbar-nav li a.search i {
+    color: #000;
+}
+#navbarCollapse .navbar-nav li.active a {
+    background-color: #036ad0;
+    color: #fff;
+}
+.navbar ul.navbar-nav {
+    display: -webkit-box;
+    -webkit-box-pack: justify;
+    display: flex;
+    justify-content: space-between;
+    text-align: justify;
+    text-align-last: justify;
+    float: none;
+}
+.navbar {
+    margin-bottom: 3px;
+}
+
+
 .tagline span {
     font-size: 13px;
     color: #4c4c4c;
@@ -71,7 +112,17 @@ h1 {
     display: inline;
 }
 .common {
-    margin-top: 5px;
+    margin-top: 20px;
+	position: relative;
+}
+.common .phone {
+	margin-right: 26px;
+}
+.common_item_second {
+	float: right;
+}
+.common_item_first {
+    position: relative;
 }
 .bell {
     display: inline;
@@ -83,10 +134,12 @@ h1 {
 .phone ul li {
     color: gray;
     font-size: 13px;
+	text-align: right;
 }
-.phone ul li.phone_black {
+.phone ul li address {
     color: black;
     font-size: 18px;
+	margin-bottom: 5px;
 }
 .btn-secondary {
     color: #036ad0;
@@ -122,14 +175,15 @@ header {
 }
 
 .main_slider_block {
-    width: 645px;
-    height: 330px;
+    max-width: 645px;
     background-color: #e6e6ea;
     z-index: 1;
     opacity: 0.9;
+    position: relative;
 }
 .main_slider_item {
-    padding: 29px 150px 50px 84px;
+    padding: 29px 84px 182px 84px;
+    width: 100%;
 }
 .main_slider_item p {
     float: left;
@@ -162,6 +216,9 @@ p {
     margin-bottom: 20px;
 }
 
+#fon_video {
+    position: relative;
+}
 .fon_video_block {
     margin: 170px 0px 0px 82px;
 }
@@ -172,30 +229,36 @@ p {
     padding-top: 15px;
 }
 
-.services h3 {
+h3 {
     color: #000;
-    margin-top: 70px;
+    margin-top: 59px;
     font-size: 30px;
     line-height: 1.4;
     letter-spacing: 2px;
-    margin-bottom: 20px;
+    margin-bottom: 11px;
 }
-.services h3:before {
+h3:before {
     content: "";
     display: block;
     width: 43px;
     height: 3px;
     background-color: #05b8f4;
-    top: 1543px;
+    top: 19px;
+    left: 29px;
+    position: absolute;
     clear: both;
+    font-weight: bold;
 }
 .services_heder {
     padding-left: 85px;
+    position: relative;
 }
 .services_item {
-    margin-top: 44px;
+    margin-top: 34px;
     margin-bottom: 50px;
+    position: relative;
 }
+
 .services_item p {
    color: #444444;
 }
@@ -205,7 +268,7 @@ h6 {
     font-size: 16px;
     font-weight: bold;
     letter-spacing: 1px;
-    margin: 27px 0px 12px;
+    margin: 25px 0px 7px;
 }
 
 .overlay {
@@ -213,18 +276,25 @@ h6 {
 }
 
 .consultation {
-    background: url("../images/woman.png") center center no-repeat;
     margin-bottom: 40px;
+    position: relative;
 }
 .consultation p {
     color: #fff;
     padding: 16px 0px 26px 0px;
 }
 .consultation_item {
-    padding: 43px 0px 21px 50px;
+    /*background: url("../images/woman.png") center center no-repeat;*/
+    position: absolute;
+    top: 0px;
+    left: 10px;
+    padding: 35px 0px 19px 50px;
 }
 .consultation_item h4 {
     margin-top: 10px;
+}
+.consultation img {
+    width: 100%;
 }
 
 .atmosphere {
@@ -262,6 +332,113 @@ form {
 }
 fieldset {
     padding: 54px 54px 59px 64px;
+	position: relative;
+}
+form  input[placeholder] {
+	width: 100%;
+	height: auto;
+	padding: 18px;
+}
+/*input[placeholder]          {text-overflow:ellipsis;}
+input::-moz-placeholder     {text-overflow:ellipsis;} 
+input:-moz-placeholder      {text-overflow:ellipsis;} 
+input:-ms-input-placeholder {text-overflow:ellipsis;} 
+input::-webkit-input-placeholder       {opacity: 1; transition: opacity 0.3s ease;}
+input::-moz-placeholder                {opacity: 1; transition: opacity 0.3s ease;}
+input:-moz-placeholder                 {opacity: 1; transition: opacity 0.3s ease;}
+input:-ms-input-placeholder            {opacity: 1; transition: opacity 0.3s ease;}
+input:focus::-webkit-input-placeholder {opacity: 0; transition: opacity 0.3s ease;}
+input:focus::-moz-placeholder          {opacity: 0; transition: opacity 0.3s ease;}
+input:focus:-moz-placeholder           {opacity: 0; transition: opacity 0.3s ease;}
+input:focus:-ms-input-placeholder      {opacity: 0; transition: opacity 0.3s ease;}
+input:focus:-webkit-input-placeholder {border-color:#c0392b;}
+input:focus:-moz-placeholder          {border-color:#c0392b;}/* Firefox 19+ */
+/*input:focus:-moz-placeholder           {border-color:#c0392b;}/* Firefox 18- */
+/*input:focus:-ms-input-placeholder      {border-color:#c0392b;}
+input:hover:-webkit-input-placeholder {color:#c0392b;}
+input:hover:-moz-placeholder          {color:#c0392b;}/* Firefox 19+ */
+/*input:hover:-moz-placeholder           {color:#c0392b;}/* Firefox 18- */
+/*input:hover:-ms-input-placeholder      {color:#c0392b;}
+input[placeholder]:hover:-moz-placeholder {
+	color:#c0392b;
+}*/
+fieldset p  {
+    position: relative;
+
+}
+input[type=checkbox] {
+    display: none;
+}
+fieldset p span.ceckin {
+    height: 18px;
+    width: 18px;
+    border: 1px solid gray;
+    display: inline-block;
+    position: absolute;
+    background-color:#FFF;
+    margin-right: 10px;
+    bottom: 0px;
+}
+fieldset p .ceckin:active {
+    border-color: #1d64aa;
+}
+[type=checkbox]:checked + .ceckin:before {
+    content: '\2714';
+    position: absolute;
+    font-size:15px;
+    color: #1d64aa;
+}
+
+input[type="radio"], input[type="checkbox"] {
+	float: left;
+	margin-right: 10px;
+	width: 20px;
+	height: 20px;
+	color: #1d64aa;
+}
+
+fieldset p label {
+	display: inline!important;
+	vertical-align: middle;
+    font-size: 13px;
+    color: #444444;
+}
+.checkbox_item {
+    position: relative;
+}
+
+fieldset p .btn {
+    margin-top: 40px;
+}
+.checkbox_item label {
+    padding-left: 30px;
+}
+
+.raz {
+    position: relative;
+}
+.raz span {
+    position: absolute;
+    bottom: 0;
+    left: 2px;
+    opacity: .5;
+    visibility: hidden;
+    transition: .2s;
+}
+.raz input:placeholder-shown ~ span {
+    visibility: visible;
+    color: #969696;
+}
+.raz input:placeholder-shown:focus ~ span,
+.raz input:not(:placeholder-shown) ~ span {
+    bottom: 100%;
+    opacity: 1;
+    font-size: 80%;
+    visibility: visible;
+    color: #969696;
+}
+.raz span {
+    padding-left: 18px;
 }
 
 footer {
@@ -323,6 +500,9 @@ footer {
 .bottom_footer {
     padding: 26px 0px;
 }
+.bottom_footer span {
+    font-size: 13px;
+}
 .made {
     float: right;
 }
@@ -339,4 +519,161 @@ address {
     .services_item {
         text-align: center;
     }
+    .common_item_first, .common_item_second {
+        display: flex;
+        justify-content: center;
+        float: none;
+    }
+    h1 {
+        font-size: 20px;
+    }
+    .main_slider_item p {
+        font-size: 12px;
+    }
+    .main_slider_item {
+    }
+    .footer_items_menu address {
+        font-size: 18px;
+    }
+    .footer_center {
+        text-align: center;
+    }
+    .consultation h4 {
+        font-size: 20px;
+    }
+    .consultation p {
+        font-size: 10px;
+        padding-bottom: 5px;
+    }
+    .consultation button {
+        float: right;
+    }
+
+
 }
+@media (max-width: 800px) {
+    .consultation_item {
+        padding-top: 25px;
+        padding-bottom: 5px;
+        height: 100%;
+    }
+    .consultation_item p {
+        width: 245px;
+    }
+    .consultation_item button {
+        position: absolute;
+        right: 0px;
+        bottom: 10px;
+    }
+}
+@media (max-width: 766px) {
+    .navbar-header .navbar-brand {
+        display: inline-block;
+        position: absolute;
+        height: 100%;
+        line-height: 50px;
+    }
+    .navbar-default {
+        background-color: #f8f8f8;
+        border-color: #e7e7e7;
+    }
+    .navbar ul.navbar-nav {
+        display: block;
+    }
+}
+@media (max-width: 600px) {
+    .consultation_item button {
+        width: 120px;
+        height: auto;
+        font-size: 13px;
+    }
+    .consultation_item p {
+        padding-top: 5px;
+    }
+    .consultation_item {
+        padding-top: 5px;
+    }
+    #navbarCollapse .navbar-nav li a i {
+        margin-left: 6px;
+    }
+}
+
+@media (max-width: 580px) {
+    h1, h2 {
+        font-size: 15px;
+    }
+    h3 {
+        font-size: 18px;
+    }
+    .main_slider_item p {
+        font-size: 8px;
+    }
+    .main_slider_item {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    .fon_video_block {
+        margin-left: 0px;
+        text-align: center;
+    }
+    .fon_video_block_item p, .services_heder p {
+        font-size: 11px;
+    }
+    .services_heder {
+        padding-left: 80px;
+    }
+    .services_heder p {
+
+    }
+    .services_item img {
+        width: 100%;
+    }
+    .bottom_footer span {
+        font-size: 12px;
+        text-align: center;
+    }
+    .footer_items_menu ul.link_social {
+        float: none;
+        text-align: center;
+    }
+
+    .consultation_item p {
+        width: 130px;
+        font-size: 8px;
+    }
+    .consultation_item h4 {
+        font-size: 12px;
+    }
+    .consultation_item button {
+        width: 80px;
+        font-size: 7px;
+    }
+    .navbar-brand {
+        text-align: center;
+    }
+    .phone ul li address {
+        font-size: 10px;
+    }
+    .main_slider_item button {
+        width: 156px;
+    }
+    .bell button {
+        width: 120px;
+        font-size: 11px;
+    }
+    .tagline {
+        text-align: center;
+        margin-right: 15px;
+    }
+    .checkbox_item label {
+        font-size: 12px;
+        padding-left: 0px;
+    }
+    .checkbox_item .ceckin {
+        position: static;
+    }
+    fieldset input[type=submit] {
+        width: 173px;
+    }
+}
+

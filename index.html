@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Test</title>
     <link href="bootstrap-3.3.7-dist/css/bootstrap.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
@@ -13,54 +14,98 @@
 	<script type="text/javascript" charset="utf-8" src="plagins/jquery.mb.YTPlayer-master/js/jquery.mb.YTPlayer.js"></script>
     <script src="js/script.js"></script>
 
-
-
 </head>
+
 <body>
     <div class="wrapper">
         <div class="container-fluid">
             <header>
                 <div class="row">
-                    <div class="col-md-6">
+                    <div class="col-md-6 col-sm-12">
                         <div class="common">
-                            <div class="navbar-brand">
-                                <a href="#">
-                                    <img src="images/logo.png" alt="logo">
-                                    <span class="big_text">Логотип</span>
-                                </a>
-                            </div>
-                            <div class="tagline">
-                                <span>
-                                    Корпоративный сайт современной компании
-                                </span>
+                            <div class="common_item_first">
+                                <div class="navbar-brand">
+                                    <a href="#">
+                                        <img src="images/logo.png" alt="logo">
+                                        <span class="big_text">Логотип</span>
+                                    </a>
+                                </div>
+                                <div class="tagline">
+                                    <span>
+                                        Корпоративный сайт современной компании
+                                    </span>
+                                </div>
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-6">
+                    <div class="col-md-6 col-sm-12 col-xs-12">
                         <div class="common">
-                            <div class="phone">
-                                <ul>
-                                    <li class="phone_black">8 (800) 700-00-00</li>
-                                    <li>Звонок по России бесплатный</li>
-                                </ul>
-                            </div>
-                            <div class="bell">
-                                <button type="button" class="btn btn-secondary btn-lg">Заказать звонок</button>
-                            </div>
+							<div class="common_item_second">
+								<div class="phone">
+									<ul>
+										<li><address>8 (800) 700-00-00</address></li>
+										<li>Звонок по России бесплатный</li>
+									</ul>
+								</div>
+								<div class="bell">
+									<button type="button" class="btn btn-secondary btn-lg">Заказать звонок</button>
+								</div>
+							</div>
                         </div>
                     </div>
                 </div>
             </header>
-            <nav class="navbar navbar-default">
-                <ul class="nav navbar-nav">
-                    <li><a href="#">Компания</a></li>
-                    <li class="active"><a href="#">Каталог</a></li>
-                    <li><a href="#">Услуги</a></li>
-                    <li><a href="#">Проекты</a></li>
-                    <li><a href="#">Информация</a></li>
-                    <li><a href="#">Контакты</a></li>
-                    <li><a href="#"><i class="fa fa-search" aria-hidden="true"></i></a></li>
-                </ul>
+            <nav role="navigation" class="navbar navbar-default">
+                <!-- мобильное меню -->
+                <div class="navbar-header">
+                    <button type="button" data-target="#navbarCollapse" data-toggle="collapse" class="navbar-toggle">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a href="#" class="navbar-brand"><span class="big_text">Логотип</span></a>
+                </div>
+                <!-- Навигационное меню -->
+                <div id="navbarCollapse" class="collapse navbar-collapse">
+                    <ul class="nav navbar-nav">
+                        <li class="active"><a href="#">Компания</a></li>
+
+                        <li class="dropdown">
+                            <a data-toggle="dropdown" class="dropdown-toggle" href="#">Каталог<i class="fa fa-angle-down" aria-hidden="true"></i></a>
+                            <ul role="menu" class="dropdown-menu">
+                                <li><a href="#">Каталог</a></li>
+                                <li><a href="#">Каталог</a></li>
+                                <li><a href="#">Каталог</a></li>
+                                <li class="divider"></li>
+                                <li><a href="#">Каталог</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a data-toggle="dropdown" class="dropdown-toggle" href="#">Услуги<i class="fa fa-angle-down" aria-hidden="true"></i></a>
+                            <ul role="menu" class="dropdown-menu">
+                                <li><a href="#">Услуги</a></li>
+                                <li><a href="#">Услуги</a></li>
+                                <li><a href="#">Услуги</a></li>
+                                <li class="divider"></li>
+                                <li><a href="#">Услуги</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a data-toggle="dropdown" class="dropdown-toggle" href="#">Проекты<i class="fa fa-angle-down" aria-hidden="true"></i></a>
+                            <ul role="menu" class="dropdown-menu">
+                                <li><a href="#">Проекты</a></li>
+                                <li><a href="#">Проекты</a></li>
+                                <li><a href="#">Проекты</a></li>
+                                <li class="divider"></li>
+                                <li><a href="#">Проекты</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">Информация</a></li>
+                        <li><a href="#">Контакты</a></li>
+                        <li><a href="#" class="search"><i class="fa fa-search" aria-hidden="true"></i></a></li>
+                    </ul>
+                </div>
             </nav>
         </div>
 
@@ -233,15 +278,14 @@
                     </div>
                 </div>
 
-                <div class="consultation">
-                    <div class="row">
-                        <div class="col-md-8">
-                            <div class="consultation_item">
-                                <h4>Консультация по услугам</h4>
-                                <p>Менеджеры компании с радостью ответят на ваши вопросы и произведут расчет стоимости услуг и подготовят
-                                    индивидуальное коммерческое предложение.</p>
-                                <button type="button" class="btn btn-primary btn-lg">Задать вопрос</button>
-                            </div>
+                <div class="row">
+                    <div class="consultation">
+                        <img src="images/woman.png" alt="consultation">
+                        <div class="consultation_item col-md-8 col-sm-10 col-xs-10">
+                            <h4>Консультация по услугам</h4>
+                            <p>Менеджеры компании с радостью ответят на ваши вопросы и произведут расчет стоимости услуг и подготовят
+                                индивидуальное коммерческое предложение.</p>
+                            <button type="button" class="btn btn-primary btn-lg">Задать вопрос</button>
                         </div>
                     </div>
                 </div>
@@ -264,21 +308,21 @@
             <div class="container-fluid">
                 <div class="question_item">
                     <div class="row">
-                        <div class="col-md-6">
+                        <div class="col-md-6 col-sm-6">
                             <div class="ask">
                                 <h5>Готовы ответить на ваши вопросы</h5>
                                 <p>Для этого обратитесь, пожалуйста, в Дирекцию по коммуникациям и связям с общественностью, отправив
                                     письмо на адрес info@kompany.ru или заполнив форму обратной связи.</p>
                             </div>
                         </div>
-                        <div class="col-md-6">
+                        <div class="col-md-6 col-sm-6">
                             <div class="form_block">
                                 <form class="contact_form" action="#" method="post" name="contact_form">
                                     <fieldset>
-                                        <p><input id="name" placeholder="Ваше имя" required /></p>
-                                        <p><input type="email" name="email" placeholder="E-mail" required /></p>
-                                        <p><input type="tel" name="tel" pattern="2[0-9]{3}-[0-9]{3}" placeholder="Ваш телефон" required /></p>
-                                        <p><input type="checkbox" name="yes">Я согласен на обработку персональных данных</p>
+                                        <p><label class="raz"><input id="name" placeholder="&nbsp;" required /><span>Ваше имя</span></label></p>
+                                        <p><label class="raz"><input type="email" name="email" placeholder="&nbsp;" required /><span>E-mail</span></label></p>
+                                        <p><label class="raz"><input type="tel" name="tel" pattern="2[0-9]{3}-[0-9]{3}" placeholder="&nbsp;" required /><span>Ваш телефон</span></label></p>
+                                        <p class="checkbox_item"><input type="checkbox" name="yes" id="check"><span class="ceckin" type="checkbox"></span><label for="check">Я согласен на обработку персональных данных</label></p>
                                         <p><input type="submit" value="Отправить" formmethod="post" class="btn btn-primary btn-lg"></p>
                                     </fieldset>
                                 </form>
@@ -293,37 +337,41 @@
         <div class="container-fluid">
             <div class="footer_items_menu">
                 <div class="row">
-                    <div class="col-md-4">
+                    <div class="col-md-4 col-sm-3 col-xs-12">
                         <address>8 (800) 700-00-00</address>
                     </div>
-                    <div class="col-md-2">
-                        <h6>Информация</h6>
-                        <ul>
-                            <li><a href="#">Кампания</a></li>
-                            <li><a href="#">Каталог</a></li>
-                            <li><a href="#">Услуги</a></li>
-                            <li><a href="#">Проекты</a></li>
-                            <li><a href="#">Сертификаты</a></li>
-                            <li><a href="#">Вакансии</a></li>
-                            <li><a href="#">Контакты</a></li>
-                        </ul>
+                    <div class="col-md-2 col-sm-3 col-xs-6">
+                        <div class="footer_center">
+                            <h6>Информация</h6>
+                            <ul>
+                                <li><a href="#">Кампания</a></li>
+                                <li><a href="#">Каталог</a></li>
+                                <li><a href="#">Услуги</a></li>
+                                <li><a href="#">Проекты</a></li>
+                                <li><a href="#">Сертификаты</a></li>
+                                <li><a href="#">Вакансии</a></li>
+                                <li><a href="#">Контакты</a></li>
+                            </ul>
+                        </div>
                     </div>
-                    <div class="col-md-2">
-                        <h6>Магазин</h6>
-                        <ul>
-                            <li><a href="#">Принтеры</a></li>
-                            <li><a href="#">Сканеры</a></li>
-                            <li><a href="#">Уличная мебель</a></li>
-                            <li><a href="#">Футболки</a></li>
-                            <li><a href="#">Фонари</a></li>
-                        </ul>
+                    <div class="col-md-2 col-sm-3 col-xs-6">
+                        <div class="footer_center">
+                            <h6>Магазин</h6>
+                            <ul>
+                                <li><a href="#">Принтеры</a></li>
+                                <li><a href="#">Сканеры</a></li>
+                                <li><a href="#">Уличная мебель</a></li>
+                                <li><a href="#">Футболки</a></li>
+                                <li><a href="#">Фонари</a></li>
+                            </ul>
+                        </div>
                     </div>
-                    <div class="col-md-4">
+                    <div class="col-md-4 col-sm-3 col-xs-12">
                         <ul class="link_social">
-                            <li><a href="https://vk.com/"><i class="fa fa-vk" aria-hidden="true"></i></a></li>
-                            <li><a href="https://ru-ru.facebook.com/"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-                            <li><a href="https://www.instagram.com/"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
-                            <li><a href="https://www.youtube.com/"><i class="fa fa-youtube-play" aria-hidden="true"></i></a></li>
+                            <li><a href="https://vk.com/" target="_blank"><i class="fa fa-vk" aria-hidden="true"></i></a></li>
+                            <li><a href="https://ru-ru.facebook.com/" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                            <li><a href="https://www.instagram.com/" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+                            <li><a href="https://www.youtube.com/" target="_blank"><i class="fa fa-youtube-play" aria-hidden="true"></i></a></li>
                         </ul>
                     </div>
                 </div>
@@ -331,11 +379,11 @@
             <div class="footer_items">
                 <div class="bottom_footer">
                     <div class="row">
-                        <div class="col-md-6">
+                        <div class="col-md-6 col-sm-6 col-xs-6">
                             <span>© 2017 Все права защищены.</span>
                         </div>
-                        <div class="col-md-6">
-                            <span class="made">Сделано в студии <a href="https://ms-net.ru/">«Медиасеть»</a></span>
+                        <div class="col-md-6 col-sm-6 col-xs-6">
+                            <span class="made">Сделано в студии <a href="https://ms-net.ru/" target="_blank">«Медиасеть»</a></span>
                         </div>
                     </div>
                  </div>

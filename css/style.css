@@ -8,18 +8,26 @@ ul {
 a:hover {
     text-decoration: none;
 }
-.container-fluid {
+.container {
     max-width: 980px;
+    margin: 0 auto;
+    padding-left: 15px;
+    padding-right: 15px;
+    position: relative;
 }
 
 .btn {
     width: 205px;
     height: 44px;
     border-radius: 0px!important;
+    font-family: Arial Regular, sans-serif;
+    font-size: 15px;
 }
 .bell button {
     width: 166px;
     height: 44px;
+    font-weight: bold;
+    font-family: Arial, sans-serif;
 }
 
 h2{
@@ -151,7 +159,7 @@ header:after {
     display: block;
     width: 100%;
     height: 2px;
-    background-color: #31a6d1;
+    background: linear-gradient(to right, #2ea0d6, #31a5d1, #34abcf, #38b1cb, #3db7c6, #48c8bb);
 }
 header {
     margin-bottom: 4px;
@@ -161,17 +169,24 @@ header {
 .item{
     background: #333;
     text-align: center;
-    height: 530px !important;
 }
 .item img {
     height: 100% !important;
     position: relative;
 }
 #myCarousel {
-    height: 530px;
+    height: auto;
+    position: relative;
+}
+.carousel-inner {
+    height: 100%;
 }
 .carousel-caption{
     top: 76px;
+    text-shadow: none;
+}
+.carousel-caption .btn {
+    opacity: 1;
 }
 
 .main_slider_block {
@@ -182,18 +197,20 @@ header {
     position: relative;
 }
 .main_slider_item {
-    padding: 29px 84px 182px 84px;
+    padding: 30px 86px 182px 86px;
     width: 100%;
 }
 .main_slider_item p {
     float: left;
-    padding-bottom: 17px;
-    letter-spacing: 2px;
+    padding-bottom: 36px;
     text-align: left;
     color: #4c4c4c;
 }
 .main_slider_item button {
     float: left;
+}
+.carousel-inner > .item > a > img {
+    max-width: none;
 }
 
 .advantages {
@@ -220,7 +237,7 @@ p {
     position: relative;
 }
 .fon_video_block {
-    margin: 170px 0px 0px 82px;
+    margin: 150px 0px 0px 82px;
 }
 .fon_video_block_item p{
     color: #fff;
@@ -258,6 +275,9 @@ h3:before {
     margin-bottom: 50px;
     position: relative;
 }
+.services_item img {
+    width: 100%;
+}
 
 .services_item p {
    color: #444444;
@@ -282,6 +302,7 @@ h6 {
 .consultation p {
     color: #fff;
     padding: 16px 0px 26px 0px;
+    margin-bottom: 0px;
 }
 .consultation_item {
     /*background: url("../images/woman.png") center center no-repeat;*/
@@ -299,11 +320,11 @@ h6 {
 
 .atmosphere {
     background: url("../images/atmosphere.jpg") no-repeat fixed;
+    background-size: cover;
     height: 536px;
     position: relative;
 }
 .atmosphere h5 {
-    text-transform: uppercase;
     color: #000;
     margin-right: 82px;
     text-align: right;
@@ -317,6 +338,7 @@ h4 {
 }
 h5 {
     font-size: 30px;
+    text-transform: uppercase;
 }
 
 .question_item {
@@ -334,10 +356,10 @@ fieldset {
     padding: 54px 54px 59px 64px;
 	position: relative;
 }
-form  input[placeholder] {
+form input[placeholder] {
 	width: 100%;
-	height: auto;
-	padding: 18px;
+	height: 44px;
+    padding: 7px;
 }
 /*input[placeholder]          {text-overflow:ellipsis;}
 input::-moz-placeholder     {text-overflow:ellipsis;} 
@@ -465,23 +487,21 @@ footer {
     padding: 0px;
 }
 .footer_items_menu ul li {
-    padding-bottom: 20px;
+    padding-bottom: 9px;
 }
 .footer_items_menu ul.link_social li {
      display: inline;
-     padding-left: 22px;
+     padding-left: 23px;
  }
 .footer_items_menu ul.link_social {
     float: right;
 }
-.footer_items_menu ul li i {
-    color: #fff;
-}
-.footer_items_menu ul li i:hover {
-    color: red;
+.footer_items_menu ul.link_social a {
+    padding-left: 0px;
 }
 .footer_items_menu ul li a {
     color: #a1b7d4;
+    padding-left: 5px;
 }
 .footer_items_menu ul li a:hover {
     color: red;
@@ -541,14 +561,9 @@ address {
     .consultation h4 {
         font-size: 20px;
     }
-    .consultation p {
-        font-size: 10px;
-        padding-bottom: 5px;
+    .footer_items_menu ul.link_social li {
+        padding-left: 15px;
     }
-    .consultation button {
-        float: right;
-    }
-
 
 }
 @media (max-width: 800px) {
@@ -602,7 +617,7 @@ address {
     h1, h2 {
         font-size: 15px;
     }
-    h3 {
+    h3, h5 {
         font-size: 18px;
     }
     .main_slider_item p {

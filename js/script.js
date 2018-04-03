@@ -21,8 +21,6 @@ $(document).ready(function(){
         $("#myCarousel2").carousel(2);
     });
 
-    //video
-
 
     //paralax
     $objWindow = $(window);
@@ -43,6 +41,11 @@ $(document).ready(function(){
 		$("#fon_video").YTPlayer();
 	});
 	
+//активый путкт меню
+    $('.navbar-nav li').on("click", function(){
+        $('.navbar-nav li').removeClass("active");
+        $(this).addClass("active");
+    });
 
 
 });

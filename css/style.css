@@ -94,7 +94,7 @@ h1 {
 #navbarCollapse .navbar-nav li a.search i {
     color: #000;
 }
-#navbarCollapse .navbar-nav li.active a {
+#navbarCollapse > .navbar-nav > li.active > a {
     background-color: #036ad0;
     color: #fff;
 }
@@ -169,17 +169,24 @@ header {
 .item{
     background: #333;
     text-align: center;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: url("../images/main_slider1.jpg") center no-repeat;
+    background-size: cover;
+    min-height: 530px;
 }
 .item img {
     height: 100% !important;
     position: relative;
 }
 #myCarousel {
-    height: auto;
     position: relative;
+    min-height: 530px;
 }
 .carousel-inner {
-    height: 100%;
+    min-height: 530px;
+    position: relative;
 }
 .carousel-caption{
     top: 76px;
@@ -211,6 +218,12 @@ header {
 }
 .carousel-inner > .item > a > img {
     max-width: none;
+}
+.img_slider {
+    background: url("../images/main_slider1.jpg") center no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
 }
 
 .advantages {
@@ -299,23 +312,34 @@ h6 {
     margin-bottom: 40px;
     position: relative;
 }
+.consultation_main_item {
+    position: relative;
+    width: 100%;
+}
 .consultation p {
     color: #fff;
     padding: 16px 0px 26px 0px;
     margin-bottom: 0px;
+    width: 622px;
 }
 .consultation_item {
     /*background: url("../images/woman.png") center center no-repeat;*/
     position: absolute;
-    top: 0px;
-    left: 10px;
-    padding: 35px 0px 19px 50px;
+    top: 15%;
+    left: 8%;
 }
 .consultation_item h4 {
     margin-top: 10px;
+    display: inline-block;
 }
 .consultation img {
     width: 100%;
+}
+.consultation_hidden {
+    /*background: url("../images/woman-background-small.png") center center no-repeat;*/
+    height: 220px;
+    margin: 0px;
+    padding: 0px;
 }
 
 .atmosphere {
@@ -349,6 +373,10 @@ h5 {
     padding-top: 75px;
     padding-bottom: 30px;
 }
+.ask p {
+    color: #444444;
+}
+
 form {
     box-shadow: 0 0 10px rgba(0,0,0,0.2);
 }
@@ -361,32 +389,8 @@ form input[placeholder] {
 	height: 44px;
     padding: 7px;
 }
-/*input[placeholder]          {text-overflow:ellipsis;}
-input::-moz-placeholder     {text-overflow:ellipsis;} 
-input:-moz-placeholder      {text-overflow:ellipsis;} 
-input:-ms-input-placeholder {text-overflow:ellipsis;} 
-input::-webkit-input-placeholder       {opacity: 1; transition: opacity 0.3s ease;}
-input::-moz-placeholder                {opacity: 1; transition: opacity 0.3s ease;}
-input:-moz-placeholder                 {opacity: 1; transition: opacity 0.3s ease;}
-input:-ms-input-placeholder            {opacity: 1; transition: opacity 0.3s ease;}
-input:focus::-webkit-input-placeholder {opacity: 0; transition: opacity 0.3s ease;}
-input:focus::-moz-placeholder          {opacity: 0; transition: opacity 0.3s ease;}
-input:focus:-moz-placeholder           {opacity: 0; transition: opacity 0.3s ease;}
-input:focus:-ms-input-placeholder      {opacity: 0; transition: opacity 0.3s ease;}
-input:focus:-webkit-input-placeholder {border-color:#c0392b;}
-input:focus:-moz-placeholder          {border-color:#c0392b;}/* Firefox 19+ */
-/*input:focus:-moz-placeholder           {border-color:#c0392b;}/* Firefox 18- */
-/*input:focus:-ms-input-placeholder      {border-color:#c0392b;}
-input:hover:-webkit-input-placeholder {color:#c0392b;}
-input:hover:-moz-placeholder          {color:#c0392b;}/* Firefox 19+ */
-/*input:hover:-moz-placeholder           {color:#c0392b;}/* Firefox 18- */
-/*input:hover:-ms-input-placeholder      {color:#c0392b;}
-input[placeholder]:hover:-moz-placeholder {
-	color:#c0392b;
-}*/
 fieldset p  {
     position: relative;
-
 }
 input[type=checkbox] {
     display: none;
@@ -399,16 +403,23 @@ fieldset p span.ceckin {
     position: absolute;
     background-color:#FFF;
     margin-right: 10px;
-    bottom: 0px;
-}
-fieldset p .ceckin:active {
-    border-color: #1d64aa;
+
 }
 [type=checkbox]:checked + .ceckin:before {
-    content: '\2714';
+    /*content: '\2714';*/
+    content: "\f00c";
+    font-family: "FontAwesome";
     position: absolute;
-    font-size:15px;
     color: #1d64aa;
+    display: block;
+    font-size: 11px;
+    left: 2px;
+    bottom: 2px;
+    top: 2px;
+    right: 2px;
+}
+[type=checkbox]:checked + span.ceckin{
+    border-color: #1d64aa;
 }
 
 input[type="radio"], input[type="checkbox"] {
@@ -418,7 +429,6 @@ input[type="radio"], input[type="checkbox"] {
 	height: 20px;
 	color: #1d64aa;
 }
-
 fieldset p label {
 	display: inline!important;
 	vertical-align: middle;
@@ -427,15 +437,15 @@ fieldset p label {
 }
 .checkbox_item {
     position: relative;
+    margin-top: 18px;
 }
 
 fieldset p .btn {
     margin-top: 40px;
 }
 .checkbox_item label {
-    padding-left: 30px;
+    margin-left: 30px;
 }
-
 .raz {
     position: relative;
 }
@@ -462,6 +472,7 @@ fieldset p .btn {
 .raz span {
     padding-left: 18px;
 }
+
 
 footer {
     background-color: #1d64aa;
@@ -531,7 +542,11 @@ address {
     color: #fff;
 }
 
-
+@media (max-width: 1280px) {
+    #myCarousel, .carousel-inner, .item {
+        min-height: 530px;
+    }
+}
 @media (max-width: 995px) {
     .advantages_item {
         text-align: center;
@@ -558,28 +573,10 @@ address {
     .footer_center {
         text-align: center;
     }
-    .consultation h4 {
-        font-size: 20px;
-    }
     .footer_items_menu ul.link_social li {
         padding-left: 15px;
     }
 
-}
-@media (max-width: 800px) {
-    .consultation_item {
-        padding-top: 25px;
-        padding-bottom: 5px;
-        height: 100%;
-    }
-    .consultation_item p {
-        width: 245px;
-    }
-    .consultation_item button {
-        position: absolute;
-        right: 0px;
-        bottom: 10px;
-    }
 }
 @media (max-width: 766px) {
     .navbar-header .navbar-brand {
@@ -596,12 +593,26 @@ address {
         display: block;
     }
 }
-@media (max-width: 600px) {
-    .consultation_item button {
-        width: 120px;
-        height: auto;
-        font-size: 13px;
+@media (max-width: 726px) {
+    .consultation p {
+        width: auto;
+        padding-right: 10px;
+        padding-bottom: 16px;
     }
+}
+@media (max-width: 640px) {
+    #myCarousel, .carousel-inner, .item {
+        min-height: 460px;
+    }
+    h1 {
+        font-size: 18px;
+    }
+    .main_slider_item p {
+        padding-bottom: 25px;
+    }
+}
+
+@media (max-width: 600px) {
     .consultation_item p {
         padding-top: 5px;
     }
@@ -621,7 +632,7 @@ address {
         font-size: 18px;
     }
     .main_slider_item p {
-        font-size: 8px;
+        font-size: 13px;
     }
     .main_slider_item {
         padding-left: 10px;
@@ -651,17 +662,20 @@ address {
         float: none;
         text-align: center;
     }
-
+    .consultation_item {
+        top: 8%;
+    }
     .consultation_item p {
-        width: 130px;
-        font-size: 8px;
+        font-size: 13px;
+        display: inline-block;
     }
     .consultation_item h4 {
-        font-size: 12px;
+        font-size: 17px;
+        text-align: center;
+        display: inline-block;
     }
     .consultation_item button {
-        width: 80px;
-        font-size: 7px;
+        width: 190px;
     }
     .navbar-brand {
         text-align: center;
@@ -681,8 +695,7 @@ address {
         margin-right: 15px;
     }
     .checkbox_item label {
-        font-size: 12px;
-        padding-left: 0px;
+        margin-left: 0px;
     }
     .checkbox_item .ceckin {
         position: static;
@@ -690,5 +703,24 @@ address {
     fieldset input[type=submit] {
         width: 173px;
     }
+    fieldset {
+        padding: 54px 20px 59px 20px;;
+    }
+    h3:before {
+        width: 23px;
+    }
+    .services_heder {
+        padding-left: 60px;
+    }
 }
-
+@media (max-width: 580px) {
+    .consultation_item {
+        top: 4%;
+        left: 5%;
+    }
+}
+@media (max-width: 480px) {
+    #myCarousel, .carousel-inner, .item {
+        min-height: 460px;
+    }
+}

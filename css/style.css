@@ -55,6 +55,15 @@ h1 {
     text-transform: uppercase;
 }
 
+.header_block .container {
+    position: relative;
+}
+/*.nav:after, .nav:before {
+    display: none!important;
+}
+.navbar-collapse {
+    padding: 0px;
+}*/
 .navbar-brand span {
     color: #036ad0;
     font-weight: bold;
@@ -200,7 +209,8 @@ header {
     max-width: 645px;
     background-color: #e6e6ea;
     z-index: 1;
-    opacity: 0.9;
+    /*opacity: 0.9;*/
+	background-color: rgba(232,233,238,0.9);
     position: relative;
 }
 .main_slider_item {
@@ -250,7 +260,7 @@ p {
     position: relative;
 }
 .fon_video_block {
-    margin: 150px 0px 0px 82px;
+    margin-top: 150px;
 }
 .fon_video_block_item p{
     color: #fff;
@@ -285,7 +295,7 @@ h3:before {
 }
 .services_item {
     margin-top: 34px;
-    margin-bottom: 50px;
+    margin-bottom: 19px;
     position: relative;
 }
 .services_item img {
@@ -350,9 +360,9 @@ h6 {
 }
 .atmosphere h5 {
     color: #000;
-    margin-right: 82px;
     text-align: right;
     margin-top: 227px;
+    line-height: 1.4;
 }
 
 h4 {
@@ -510,6 +520,9 @@ footer {
 .footer_items_menu ul.link_social a {
     padding-left: 0px;
 }
+.footer_items_menu ul.link_social a:hover {
+    opacity: 0.7;
+}
 .footer_items_menu ul li a {
     color: #a1b7d4;
     padding-left: 5px;
@@ -576,6 +589,9 @@ address {
     .footer_items_menu ul.link_social li {
         padding-left: 15px;
     }
+	#navbarCollapse .navbar-nav li a {
+		font-size: 12px;
+	}
 
 }
 @media (max-width: 766px) {
@@ -604,9 +620,6 @@ address {
     #myCarousel, .carousel-inner, .item {
         min-height: 460px;
     }
-    h1 {
-        font-size: 18px;
-    }
     .main_slider_item p {
         padding-bottom: 25px;
     }
@@ -625,11 +638,11 @@ address {
 }
 
 @media (max-width: 580px) {
-    h1, h2 {
-        font-size: 15px;
-    }
-    h3, h5 {
+    h3 {
         font-size: 18px;
+    }
+    h5 {
+        font-size: 23px;
     }
     .main_slider_item p {
         font-size: 13px;
@@ -642,8 +655,11 @@ address {
         margin-left: 0px;
         text-align: center;
     }
-    .fon_video_block_item p, .services_heder p {
+    .services_heder p {
         font-size: 11px;
+    }
+    .fon_video_block_item p, .services_heder p {
+        font-size: 14px;
     }
     .services_heder {
         padding-left: 80px;
@@ -694,7 +710,7 @@ address {
         text-align: center;
         margin-right: 15px;
     }
-    .checkbox_item label {
+    /*.checkbox_item label {
         margin-left: 0px;
     }
     .checkbox_item .ceckin {
@@ -702,7 +718,7 @@ address {
     }
     fieldset input[type=submit] {
         width: 173px;
-    }
+    }*/
     fieldset {
         padding: 54px 20px 59px 20px;;
     }
@@ -712,8 +728,6 @@ address {
     .services_heder {
         padding-left: 60px;
     }
-}
-@media (max-width: 580px) {
     .consultation_item {
         top: 4%;
         left: 5%;
@@ -722,5 +736,11 @@ address {
 @media (max-width: 480px) {
     #myCarousel, .carousel-inner, .item {
         min-height: 460px;
+    }
+    h1 {
+        font-size: 15px;
+    }
+    h2 {
+        font-size: 25px;
     }
 }
